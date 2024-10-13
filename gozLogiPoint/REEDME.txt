@@ -1,0 +1,28 @@
+Gozulio's Logistics point. Version 1.1
+
+To install the script, place this folder (gozLogiPoint) in your mission directory.
+Open/Create the file Ddscription.ext, a blank text document will work fine.
+In description.ext add the following: #include "gozLogiPoint\dialog.hpp"
+
+Now load your mision in 3den.
+Place down whatever you want the logistics Depo to be.
+Under the Depo's attributes add the fallowing line to init
+_logiMenu = this addAction["Access logistics Point", "gozLogiPoint\logisticpoint.sqf", [], 1.5, true, true, "", "true", 50]
+
+Next set down a marker near your Depo.
+Under the Markers attributes set its Variable Name to "supplyCrateSpawn"
+
+Previewing your mission should now give you an "Acces logistics Point" item in your scroll menu
+
+Now in the gozLogiPoint folder open Supply_Config.sqf
+This is where you can enable or disable different supply crates, Included modded ones.
+
+CHANGELOG:
+V1.1
+Added support for NIarms.
+Trimmed useless entries in Supply_Config.sqf
+Fixed Logistics point being accessable from infinate range.
+Fixed typo in REEDME.
+
+V1.0
+Initial Release.
