@@ -18,7 +18,7 @@ _thingsToPopulateCN_Vanilla_NATO =
 	"asa_Ammobox_GER_Ammo_F",
 	"asa_Ammobox_ATBOX_F",
 	"asa_Ammobox_ATBOX_Bunkerfaust",
-	"asa_weaponbox_Fliegerfaust_F",
+	"asa_Weaponbox_Fliegerfaust_F",
 	"asa_Ammo_Explo_F",
 	"asa_Ammobox_Medical_common_F",
 	"asa_Ammobox_Medical_circulation_F",
