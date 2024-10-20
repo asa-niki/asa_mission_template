@@ -1,4 +1,5 @@
 #include "gozLogiPoint\dialog.hpp"
+#include "z\asa\addons\asa_core\cba_settings\cba_settings.hpp"
 
 //------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------Hier Editieren-------------------------------------------------//
@@ -90,3 +91,4 @@ class Extended_DisplayLoad_EventHandlers {
 //ICON
 //__EXEC (MISSION_ROOT = __FILE__ select [0, count __FILE__ - 15])
 //
+
