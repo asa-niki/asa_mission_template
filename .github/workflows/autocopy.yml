@@ -21,4 +21,26 @@ jobs:
           git clone https://${{ secrets.MY_PAT }}@github.com/asa-niki/asa_missions.git /home/runner/work/missions
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }} 
+          ls ${{ github.workspace }}
+      - name: Copy source folder to target directories
+        run: |
+          # Folder to copy (source folder)
+          SOURCE_FOLDER="your_source_folder"
+
+          # Check if source folder exists
+          if [ ! -d "$SOURCE_FOLDER" ]; then
+              echo "Source folder '$SOURCE_FOLDER' does not exist!"
+              exit 1
+          fi
+
+          # Loop through directories that match "NUMBER NUMBER _"
+          for TARGET_FOLDER in [0-9][0-9]_*; do
+              if [ -d "$TARGET_FOLDER" ]; then
+                  echo "Copying '$SOURCE_FOLDER' to '$TARGET_FOLDER'..."
+                  cp -r "$SOURCE_FOLDER" "$TARGET_FOLDER"
+              else
+                  echo "No valid target folder found."
+              fi
+          done
+
+          echo "Copying complete!"
