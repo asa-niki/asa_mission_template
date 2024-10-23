@@ -15,7 +15,7 @@ jobs:
       - name: clone both repos
         uses: actions/checkout@master
       - name: pull primary repo
-        run: git clone https://${{ secrets.MY_PAT }}@github.com/asa-niki/asa_missions.git ${{ github.workspace }}/..
+        run: git clone https://${{ secrets.MY_PAT }}@github.com/asa-niki/asa_missions.git ${{ github.workspace }}/../..
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }} 
