@@ -27,10 +27,10 @@ jobs:
       - name: Copy template to subdirectories
         run: |
           # Folder to copy (source folder)
-          SOURCE_FOLDER="/home/runner/work/missions"
+          SOURCE_FOLDER="/home/runner/work/asa_mission_template/asa_mission_template"
 
           # Define target folder base path
-          TARGET_FOLDER_BASE="/home/runner/work/target_directory"
+          TARGET_FOLDER_BASE="/home/runner/work/missions/00_offene_missionen"
 
           # Check if source folder exists
           if [ ! -d "$SOURCE_FOLDER" ]; then
