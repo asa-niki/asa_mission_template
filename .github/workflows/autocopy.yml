@@ -5,10 +5,15 @@ jobs:
   autocopy:
     runs-on: ubuntu-latest
     steps:
-      - name: clone booth repos
-        uses: actions/checkout@master
-      - name: pull primary repo
-        run: git clone https://${{secrets.MY_PAT}}@github.com/asa-niki/asa_missions.git
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      - shell: bash
+      env:
+        MY_PAT: ${{secrets.MY_PAT}}
+      run: |
+        example-command "$SUPER_SECRET"
+    #   - name: clone booth repos
+    #     uses: actions/checkout@master
+    #   - name: pull primary repo
+    #     run: git clone https://${{secrets.MY_PAT}}@github.com/asa-niki/asa_missions.git
+    #   - name: List files in the repository
+    #     run: |
+    #       ls ${{ github.workspace }}
