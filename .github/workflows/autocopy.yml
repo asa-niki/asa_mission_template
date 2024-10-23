@@ -22,6 +22,7 @@ jobs:
       - name: List files in the repository
         run: |
           tree
+          pwd
       - name: Copy template to subdirectories
         run: |
           # Folder to copy (source folder)
