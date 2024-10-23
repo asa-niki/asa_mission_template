@@ -1,5 +1,5 @@
 name: autocopy
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} Vorlage wird kopiert.
 
 on: [push]
 
@@ -21,13 +21,13 @@ jobs:
           git clone https://${{ secrets.MY_PAT }}@github.com/asa-niki/asa_missions.git /home/runner/work/missions
       - name: List files in the repository
         run: |
-          ls /home/runner/work/missions
-      - name: Copy source folder to target directories with template folder
+          tree
+      - name: Copy template to subdirectories
         run: |
           # Folder to copy (source folder)
           SOURCE_FOLDER="/home/runner/work/missions"
 
-          # Define target folder base path (one level deeper with 'template')
+          # Define target folder base path
           TARGET_FOLDER_BASE="/home/runner/work/target_directory"
 
           # Check if source folder exists
@@ -36,10 +36,19 @@ jobs:
               exit 1
           fi
 
-          # Create the 'template' subfolder in the target folder if it doesn't exist
-          mkdir -p "$TARGET_FOLDER_BASE/template"
+          # Check for subdirectories in the target folder base path
+          for SUBDIR in "$TARGET_FOLDER_BASE"/*/; do
+              if [ -d "$SUBDIR" ]; then
+                  echo "Copying '$SOURCE_FOLDER' to '$SUBDIR/template'..."
 
-          # Copy source folder into the 'template' subfolder of the target
-          cp -r "$SOURCE_FOLDER/." "$TARGET_FOLDER_BASE/template/"
+                  # Create the 'template' subfolder in each subdirectory if it doesn't exist
+                  mkdir -p "$SUBDIR/template"
 
-          echo "Copying complete!"
+                  # Copy the source folder contents into the 'template' folder of each subdirectory
+                  cp -r "$SOURCE_FOLDER/." "$SUBDIR/template/"
+              else
+                  echo "Kein Unterverzeichnis gefunden in '$TARGET_FOLDER_BASE'."
+              fi
+          done
+
+          echo "Kopie erstellt!"
