@@ -55,6 +55,7 @@ jobs:
 
       - name: commit changes
         run: |
+          cd /home/runner/work/missions
           git stash push --include-untracked
           git stash apply
           git add .
