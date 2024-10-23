@@ -22,10 +22,13 @@ jobs:
       - name: List files in the repository
         run: |
           ls /home/runner/work/missions
-      - name: Copy source folder to target directories
+      - name: Copy source folder to target directories with template folder
         run: |
           # Folder to copy (source folder)
           SOURCE_FOLDER="/home/runner/work/missions"
+
+          # Define target folder base path (one level deeper with 'template')
+          TARGET_FOLDER_BASE="/home/runner/work/target_directory"
 
           # Check if source folder exists
           if [ ! -d "$SOURCE_FOLDER" ]; then
@@ -33,14 +36,10 @@ jobs:
               exit 1
           fi
 
-          # Loop through directories that match "NUMBER NUMBER _"
-          for TARGET_FOLDER in [0-9][0-9]_*; do
-              if [ -d "$TARGET_FOLDER" ]; then
-                  echo "Copying '$SOURCE_FOLDER' to '$TARGET_FOLDER'..."
-                  cp -r "$SOURCE_FOLDER" "$TARGET_FOLDER"
-              else
-                  echo "No valid target folder found."
-              fi
-          done
+          # Create the 'template' subfolder in the target folder if it doesn't exist
+          mkdir -p "$TARGET_FOLDER_BASE/template"
+
+          # Copy source folder into the 'template' subfolder of the target
+          cp -r "$SOURCE_FOLDER/." "$TARGET_FOLDER_BASE/template/"
 
           echo "Copying complete!"
