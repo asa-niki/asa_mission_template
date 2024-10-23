@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@master
         with:
             repository: asa-niki/asa_missions
-            token: ${{ secrets.my_pat }}
+            token: ${{ secrets.MY_PAT }}
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
