@@ -15,8 +15,8 @@ jobs:
       - name: checkout primary repo
         uses: actions/checkout@master
       - name: clone secondary repo
-        run: cd /home/runner/work\
-          mkdir missions\
+        run: cd /home/runner/work
+          mkdir missions
           git clone https://${{ secrets.MY_PAT }}@github.com/asa-niki/asa_missions.git /home/runner/work/missions
       - name: List files in the repository
         run: |
