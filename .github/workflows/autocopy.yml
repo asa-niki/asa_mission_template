@@ -46,6 +46,7 @@ jobs:
                   # Copy the source folder contents into the 'template' folder of each subdirectory
                   # cp -r "$SOURCE_FOLDER/." "$SUBDIR/"
                   rsync -a --ignore-existing "$SOURCE_FOLDER/." "$SUBDIR/"
+                  rm -rf "$SUBDIR/.github"
               else
                   echo "Kein Unterverzeichnis gefunden in '$TARGET_FOLDER_BASE'."
               fi
