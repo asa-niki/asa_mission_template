@@ -51,8 +51,12 @@ jobs:
               fi
           done
 
-          cd /home/runner/work
-          tree
-          pwd
-
           echo "Kopie erstellt!"
+
+      - name: commit changes
+        run: |
+          git stash push --include-untracked
+          git stash apply
+          git add .
+          git commit -m "template changes"
+          git stash drop
