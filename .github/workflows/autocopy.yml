@@ -1,0 +1,8 @@
+name: autocopy
+run-name: autocopy
+on: [push]
+jobs:
+    CopyTemplate:
+        runs-on: ubuntu-latest
+        steps: 
+            - run: echo "The Job is running"
