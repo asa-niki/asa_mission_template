@@ -18,4 +18,5 @@ jobs:
         run: git clone https://${{ secrets.MY_PAT }}@github.com/asa-niki/asa_missions.git
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls ${{ github.workspace }} 
+          --project-dir ${{ github.workspace }}/..
