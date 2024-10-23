@@ -8,7 +8,7 @@ jobs:
       - name: clone booth repos
         uses: actions/checkout@master
       - name: pull primary repo
-        run: git clone https://asa-niki:${{secrets.MY_PAT}}@github.com/asa-niki/asa_missions.git
+        run: git clone https://${{secrets.MY_PAT}}@github.com/asa-niki/asa_missions.git
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
