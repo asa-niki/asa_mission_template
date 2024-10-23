@@ -47,10 +47,15 @@ jobs:
                   mkdir -p "$SUBDIR/template"
 
                   # Copy the source folder contents into the 'template' folder of each subdirectory
-                  cp -r "$SOURCE_FOLDER/." "$SUBDIR/template/"
+                  # cp -r "$SOURCE_FOLDER/." "$SUBDIR/template/"
+                  rsync -a --ignore-existing "$SOURCE_FOLDER/." "$SUBDIR/template/"
               else
                   echo "Kein Unterverzeichnis gefunden in '$TARGET_FOLDER_BASE'."
               fi
           done
+
+          cd /home/runner/work
+          tree
+          pwd
 
           echo "Kopie erstellt!"
