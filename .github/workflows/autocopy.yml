@@ -55,11 +55,14 @@ jobs:
 
       - name: commit changes
         run: |
+          echo "setting up"
           cd /home/runner/work/missions
           git config --global user.name "copybot"
           git config --global user.email "copybot@test.test"
+          echo "adding changes"
           git stash push --include-untracked
           git stash apply
           git add .
+          echo "committing"
           git commit -m "template changes"
           git stash drop
