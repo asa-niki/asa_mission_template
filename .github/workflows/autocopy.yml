@@ -43,12 +43,9 @@ jobs:
               if [ -d "$SUBDIR" ]; then
                   echo "Copying '$SOURCE_FOLDER' to '$SUBDIR/template'..."
 
-                  # Create the 'template' subfolder in each subdirectory if it doesn't exist
-                  mkdir -p "$SUBDIR/template"
-
                   # Copy the source folder contents into the 'template' folder of each subdirectory
-                  # cp -r "$SOURCE_FOLDER/." "$SUBDIR/template/"
-                  rsync -a --ignore-existing "$SOURCE_FOLDER/." "$SUBDIR/template/"
+                  # cp -r "$SOURCE_FOLDER/." "$SUBDIR/"
+                  rsync -a --ignore-existing "$SOURCE_FOLDER/." "$SUBDIR/"
               else
                   echo "Kein Unterverzeichnis gefunden in '$TARGET_FOLDER_BASE'."
               fi
