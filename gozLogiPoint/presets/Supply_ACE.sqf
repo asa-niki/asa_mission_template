@@ -1,10 +1,12 @@
 _thingsToPopulateLB_ACE =
 [
-	"ACE Spare Track",
-	"ACE Spare Wheel"
+	"ACE Ersatzkette",
+	"ACE Ersatzreifen",
+	"ACE Natodraht"
 ];
 _thingsToPopulateCN_ACE =
 [
 	"ACE_Track",
-	"ACE_Wheel"
+	"ACE_Wheel",
+	"ACE_ConcertinaWireCoil"
 ];
