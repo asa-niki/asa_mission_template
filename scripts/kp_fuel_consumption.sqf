@@ -1,6 +1,6 @@
 /*
 kp_fuel_consumption.sqf
-Author: Wyqer
+Author: Wyqer 
 Website: https://www.killahpotatoes.de
 Source & License: https://github.com/Wyqer/A3-Scripts
 Date: 2017-02-02
