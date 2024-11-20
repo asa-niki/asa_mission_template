@@ -11,7 +11,8 @@ _thingsToPopulateLB_Vanilla_NATO =
 	"ASA - Blut/Plasma",
 	"ASA - Geräte  (Medic Kiste)",
 	"ASA - Medikamente",
-	"ASA - 40mm Granaten"
+	"ASA - Sonstiges",
+	"ASA - Nachtsichtgeräte"
 ];
 _thingsToPopulateCN_Vanilla_NATO = 
 [
@@ -25,7 +26,8 @@ _thingsToPopulateCN_Vanilla_NATO =
 	"asa_Ammobox_Medical_blood_F",
 	"asa_Ammobox_Medical_equipment_F",
 	"asa_Ammobox_Medical_medication_F",
-	"asa_ammobox_GER_ammo_40mm_f"
+	"asa_ammobox_GER_ammo_40mm_f",
+	"asa_scope_night"
 ];
 //CSAT EQUIPMENT
 _thingsToPopulateLB_Vanilla_CSAT =

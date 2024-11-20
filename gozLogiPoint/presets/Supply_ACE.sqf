@@ -1,8 +1,8 @@
 _thingsToPopulateLB_ACE =
 [
-	"ACE Ersatzkette",
-	"ACE Ersatzreifen",
-	"ACE Natodraht"
+	"ACE - Ersatzkette",
+	"ACE - Ersatzreifen",
+	"ACE - Natodraht"
 ];
 _thingsToPopulateCN_ACE =
 [
