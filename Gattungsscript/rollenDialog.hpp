@@ -4,15 +4,21 @@ class klassendialog2
 		movingenable = 0; 
 		class ControlsBackground
 		{
-			class RscPicture_1200: RscPicture
+			class Background_1200: IGUIBack
 			{
+				colorBackground[] = 
+				{
+					0.2,
+					0.2,
+					0.2,
+					1
+				};
 				idc = 1200;
-				style = ST_PICTURE;
-				text = "images\ASA.paa";
 				x = 0.407187 * safezoneW + safezoneX;
 				y = 0.247 * safezoneH + safezoneY;
 				w = 0.185625 * safezoneW;
-				h = 0.528 * safezoneH;
+				h = 0.44 * safezoneH;
+				
 			};
 		};
 		class Controls
@@ -21,7 +27,7 @@ class klassendialog2
 			{
 				idc = 1500;
 				x = 0.427812 * safezoneW + safezoneX;
-				y = 0.368 * safezoneH + safezoneY;
+				y = 0.269 * safezoneH + safezoneY;
 				w = 0.144375 * safezoneW;
 				h = 0.341 * safezoneH;
 				onLBSelChanged = "missionNamespace setVariable ['selectedRole', _this, true]; false";
@@ -38,7 +44,7 @@ class klassendialog2
 				idc = 1600;
 				text = "Akzeptieren"; //--- ToDo: Localize;
 				x = 0.427812 * safezoneW + safezoneX;
-				y = 0.72 * safezoneH + safezoneY;
+				y = 0.632 * safezoneH + safezoneY;
 				w = 0.04125 * safezoneW;
 				h = 0.055 * safezoneH;
 				action = "getSelectedLoadout = 1; closeDialog 0"
@@ -48,7 +54,7 @@ class klassendialog2
 				idc = 1601;
 				text = "Abbrechen"; //--- ToDo: Localize;
 				x = 0.530937 * safezoneW + safezoneX;
-				y = 0.72 * safezoneH + safezoneY;
+				y = 0.632 * safezoneH + safezoneY;
 				w = 0.04125 * safezoneW;
 				h = 0.055 * safezoneH;
 				action = "closeDialog 2"
