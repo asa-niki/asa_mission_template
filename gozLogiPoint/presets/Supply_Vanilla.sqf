@@ -1,35 +1,36 @@
-//NATO EQUIPMENT
+// NATO EQUIPMENT
 _thingsToPopulateLB_Vanilla_NATO =
 [
 	"ASA - Munition",
 	"ASA - Panzerfäuste",
+	"ASA - RGW 90",
 	"ASA - Bunkerfäuste",
 	"ASA - Fliegerfäuste",
 	"ASA - Sprengstoff",
-	"ASA - Alpha und Bravo (Medic Kiste)",
-	"ASA - Atmung und Chirugie",
-	"ASA - Blut/Plasma",
-	"ASA - Geräte  (Medic Kiste)",
+	"ASA - Hotel",
+	"ASA - Hotel Equipment",
+	"ASA - Medic - Gruppe",
+	"ASA - Medic - Zug",
 	"ASA - Medikamente",
 	"ASA - Sonstiges",
 	"ASA - Nachtsichtgeräte"
 ];
-_thingsToPopulateCN_Vanilla_NATO = 
+_thingsToPopulateCN_Vanilla_NATO =
 [
 	"asa_Ammobox_GER_Ammo_F",
 	"asa_Ammobox_ATBOX_F",
+	"asa_Ammobox_ATBOX_rgw",
 	"asa_Ammobox_ATBOX_Bunkerfaust",
 	"asa_Weaponbox_Fliegerfaust_F",
 	"asa_Ammo_Explo_F",
-	"asa_Ammobox_Medical_common_F",
-	"asa_Ammobox_Medical_circulation_F",
-	"asa_Ammobox_Medical_blood_F",
-	"asa_Ammobox_Medical_equipment_F",
-	"asa_Ammobox_Medical_medication_F",
+	"asa_Ammobox_Medical_hotel_F",
+	"asa_Ammobox_Medical_hotel_equipment_F",
+	"asa_Ammobox_Medical_group_medic_F",
+	"asa_Ammobox_Medical_platoon_medic_F",
 	"asa_ammobox_GER_ammo_40mm_f",
 	"asa_scope_night"
 ];
-//CSAT EQUIPMENT
+// CSAT EQUIPMENT
 _thingsToPopulateLB_Vanilla_CSAT =
 [
 	"CSAT - Weapons",
@@ -50,7 +51,7 @@ _thingsToPopulateCN_Vanilla_CSAT =
 	"Box_East_Support_F",
 	"O_supplyCrate_F"
 ];
-//AAF EQUIPMENT
+// AAF EQUIPMENT
 _thingsToPopulateLB_Vanilla_AAF =
 [
 	"AAF - Weapons",
@@ -71,7 +72,7 @@ _thingsToPopulateCN_Vanilla_AAF =
 	"Box_IND_Support_F",
 	"I_supplyCrate_F"
 ];
-//FIA EQUIPMENT
+// FIA EQUIPMENT
 _thingsToPopulateLB_Vanilla_FIA =
 [
 	"FIA - Large Supply Crate"
