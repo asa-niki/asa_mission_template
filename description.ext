@@ -1,4 +1,6 @@
 #include "gozLogiPoint\dialog.hpp"
+#include "Gattungsscript\defines.hpp"
+#include "Gattungsscript\rollenDialog.hpp"
 
 //------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------Hier Editieren-------------------------------------------------//
