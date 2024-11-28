@@ -7,22 +7,22 @@
 //------------------------------------------------------------------------------------------------------------//
 
 author			= "Niki + Hausmeister";
-onLoadName		= "Whiteout";
-OnLoadIntro     = "Whiteout";
-onLoadMission	= "Kurze Beschreibung"; //Kurze Beschreibung
+onLoadName		= "Operation Crossrods IV";
+OnLoadIntro     = "Operation Crossrods IV";
+onLoadMission	= "Deutsche Kräfte sind an der Finnischen Ostflanke eingesetzt. Die 22. Panzerbrigade und die German Rangers sind angetreten um einen anlaufenden Russischen Großangriff abzuwehren und in das Gebiet der Russischen Förderation hineinzustoßen."; //Kurze Beschreibung
 loadScreen		= "images\intro.jpg"; //muss nicht bearbeitet werden
 
 class CfgWorlds
 {
 	class Any
 	{
-		author = "Author";
-		description = "";
+		author = "NIKI";
+		description = "An der Finnischen Grenze kommt es zur Entscheidung.";
 		loadingTexts[] = 
         {   
-            "", 
-            "",
-            "" 
+            "Tarnen und Täuschen ist mehr als nur ein leeres Versprechen - es ist die Kunst, unentdeckt zu bleiben.",
+            "Nicht jede Bewegung in der Luft ist harmlos... Manchmal sind es die Projektile einer AS-VAL.",
+			"Ein leises Surren in der Luft sollte sofort nach einer Deckung suchen lassen." 
         };
 	};
 };
@@ -35,7 +35,7 @@ respawn = "BASE";	// Respawn type
 respawnDelay = 15;	// Delay in seconds
 respawnDialog = 1; // 0 to disable the score table (it can still be opened by pressing 'P').
 respawnTemplates[] = {"MenuPosition"};
-respawnOnStart = 1; // 1 to execute respawn templates when a player joins the game.
+respawnOnStart = 0; // 1 to execute respawn templates when a player joins the game.
 respawnVehicleDelay = 30;
 onLoadMissionTime = 1;
 onLoadIntroTime = 1;
@@ -60,6 +60,8 @@ wreckManagerMode = 1; //ki Fahrzeuge
 wreckLimit = 10;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 1200;
+
+zeusCompositionScriptLevel = 2;
 
 //#include "CfgFunctions.hpp"
 enableDebugConsole = 1;
@@ -91,3 +93,4 @@ class Extended_DisplayLoad_EventHandlers {
 //
 //ICON
 //__EXEC (MISSION_ROOT = __FILE__ select [0, count __FILE__ - 15])
+//
