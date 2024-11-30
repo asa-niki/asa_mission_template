@@ -37,7 +37,7 @@ _rollUnits = [
 	"ASA_Fahrzeugbesatzung_F",
 	"ASA_Grenadier_F",
 	"ASA_DMSchuetze_F",
-	"ASA_Feldjaeger_F",
+	"ASA_Feldjaeger_F"
 ];
 
 {
