@@ -14,13 +14,18 @@ arsenalarea_activation addAction["Arsenalscript deaktivieren", {
 arsenalarea_activation addAction["Arsenalscript aktivieren", {
 	arsenal_area_activation = true;
 	publicVariable "arsenal_area_activation";
-	[] execVM "areaScript.sqf";
+	[] execVM "Gattungsscript\areaScript.sqf";
 }, [], 1.5, true, false, "", "true", 5];
 
-dumpArsenal = "Land_PaperBox_closed_F" createVehicle [0, 0, 0];
-arsenalBox = "asa_Arsenal_GER_F" createVehicle [0, 0, 0];
-dumpArsenal allowDamage false;
-arsenalBox allowDamage false;
-dumpArsenal enableSimulation false;
-arsenalBox enableSimulation false;
+if (isNil "dumpArsenal") then {
+	dumpArsenal = "Land_PaperBox_closed_F" createVehicle [0, 0, 0];
+	dumpArsenal allowDamage false;
+	dumpArsenal enableSimulation false;
+};
+if (isNil "arsenalBox") then {
+	arsenalBox = "asa_Arsenal_GER_F" createVehicle [0, 0, 0];
+	arsenalBox allowDamage false;
+	arsenalBox enableSimulation false;
+};
+
 [] execVM "Gattungsscript\scriptStart.sqf";
