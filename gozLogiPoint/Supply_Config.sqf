@@ -10,6 +10,11 @@ _VanillaFIA = false;
 //ACE
 _ACE = true;
 
+//ASA
+
+_ASA_Vehicles = true;
+_ASA_Storage = true;
+
 //NIARMS
 _NIARMS_FULL = false;
 

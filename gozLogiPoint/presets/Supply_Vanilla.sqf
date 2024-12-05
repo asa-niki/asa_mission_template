@@ -1,19 +1,18 @@
 // NATO EQUIPMENT
 _thingsToPopulateLB_Vanilla_NATO =
 [
-	"ASA - Munition",
-	"ASA - Panzerfäuste",
-	"ASA - RGW 90",
-	"ASA - Bunkerfäuste",
-	"ASA - Fliegerfäuste",
-	"ASA - Sprengstoff",
-	"ASA - Hotel",
-	"ASA - Hotel Equipment",
-	"ASA - Medic - Gruppe",
-	"ASA - Medic - Zug",
-	"ASA - Medikamente",
-	"ASA - Sonstiges",
-	"ASA - Nachtsichtgeräte"
+	"ASA - Kampfsatz Gruppe",
+	"ASA - Kampfsatz - Pzf3",
+	"ASA - Kampfsatz - RGW 90",
+	"ASA - Kampfsatz - Bunkerfaust",
+	"ASA - Kampfsatz - Fliegerfaust",
+	"ASA - Ausruestungssatz - Sprengstoff",
+	"ASA - Hotel - Allgemein",
+	"ASA - Hotel - Equipment",
+	"ASA - Sanitaetssatz - Gruppe",
+	"ASA - Sanitaetssatz - Zug",
+	"ASA - Kampfsatz (Sonstiges)",
+	"ASA - Nachtsichtaufsätze Waffen"
 ];
 _thingsToPopulateCN_Vanilla_NATO =
 [

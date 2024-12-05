@@ -36,6 +36,20 @@ if (_ACE) then
 	_thingsToPopulateLB = _thingsToPopulateLB + _thingsToPopulateLB_ACE;
 	_thingsToPopulateCN = _thingsToPopulateCN + _thingsToPopulateCN_ACE;
 };
+
+if (_ASA_Vehicles) then
+{
+	#include "presets\Supply_asa_vehicles.sqf"
+	_thingsToPopulateLB = _thingsToPopulateLB + _thingsToPopulateLB_vehicles;
+	_thingsToPopulateCN = _thingsToPopulateCN + _thingsToPopulateCN_vehicles;
+};
+
+if (_ASA_Storage) then
+{
+	#include "presets\Supply_asa_storage.sqf"
+	_thingsToPopulateLB = _thingsToPopulateLB + _thingsToPopulateLB_storage;
+	_thingsToPopulateCN = _thingsToPopulateCN + _thingsToPopulateCN_storage;
+};
 	
 if (_NIARMS_FULL) then
 {
