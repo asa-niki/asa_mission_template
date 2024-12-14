@@ -1,4 +1,4 @@
-while {arsenal_area_activation} do {
+while {arsenalarea_activation} do {
 	_listOfPlayers = allPlayers inAreaArray arsenalArea; //Spieler in der Zone
 	if (!isNil "_listOfPlayers") then {
 		if (isNil "playerArsenalList") then {

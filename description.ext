@@ -94,3 +94,29 @@ class Extended_DisplayLoad_EventHandlers {
 //ICON
 //__EXEC (MISSION_ROOT = __FILE__ select [0, count __FILE__ - 15])
 //
+
+class CfgFunctions
+{
+	class JUJU
+	{
+		class areaScripts
+		{
+			file = "Gattungsscript";
+			class areaScript 
+			{
+				file = "Gattungsscript\areaScript.sqf";
+			};
+		};
+		class logiMoving
+		{
+			class logiContainerAddAction
+			{
+				file = "scripts\logiReplacement\moveLogiContainer.sqf";
+			};
+			class logiMarkerAddAction
+			{
+				file = "scripts\logiReplacement\moveLogiMarker.sqf";
+			};
+		};
+	};
+};
