@@ -11,6 +11,7 @@ onLoadName		= "Operation Crossrods IV";
 OnLoadIntro     = "Operation Crossrods IV";
 onLoadMission	= "Deutsche Kräfte sind an der Finnischen Ostflanke eingesetzt. Die 22. Panzerbrigade und die German Rangers sind angetreten um einen anlaufenden Russischen Großangriff abzuwehren und in das Gebiet der Russischen Förderation hineinzustoßen."; //Kurze Beschreibung
 loadScreen		= "images\intro.jpg"; //muss nicht bearbeitet werden
+briefingName    = "Operation Russitsch - 1";
 
 class CfgWorlds
 {
