@@ -1,21 +1,27 @@
 if (isMultiplayer) then {
+	arsenal_area_activation = true;
 	[] execVM "Gattungsscript\scriptStart.sqf";
-	arsenalarea_activation addAction["Arsenalscript deaktivieren", {
-		arsenalarea_activation = false;
+	if (isNil "arsenalarea_activation") then {
+		arsenalarea_activation = "VR_3DSelector_01_incomplete_F" createVehicle [-10, -10, 0];
 		publicVariable "arsenalarea_activation";
+		arsenalarea_activation allowDamage false;
+	};
+	arsenalarea_activation addAction["Arsenalscript deaktivieren", {
+		arsenal_area_activation = false;
+		publicVariable "arsenal_area_activation";
 		{[_x,1,["ACE_SelfActions", "ASA", "Arsenal"]] call ace_interact_menu_fnc_removeActionFromObject} forEach allPlayers;  
 		{[_x,1,["ACE_SelfActions", "ASA", "Loadouts"]] call ace_interact_menu_fnc_removeActionFromObject} forEach allPlayers;
 		{[_x,1,["ACE_SelfActions", "ASA", "persArsenal"]] call ace_interact_menu_fnc_removeActionFromObject} forEach allPlayers;
 	}, [], 1.5, true, false, "", "true", 5];
 	
 	arsenalarea_activation addAction["Arsenalscript aktivieren", {
-		arsenalarea_activation = true;
-		publicVariable "arsenalarea_activation";
+		arsenal_area_activation = true;
+		publicVariable "arsenal_area_activation";
 		remoteExec ["JUJU_fnc_areaScript", 0];
 	}, [], 1.5, true, false, "", "true", 5];
 } else {
-	arsenalarea_activation = true;
-	publicVariable "arsenalarea_activation";
+	arsenal_area_activation = true;
+	publicVariable "arsenal_area_activation";
 	
 	missionNamespace setvariable ["SPLogLevel", 3];
 	profileNamespace setvariable ["SPSavelocation", 1];
@@ -24,13 +30,13 @@ if (isMultiplayer) then {
 	arsenalarea_activation allowDamage false;
 	
 	arsenalarea_activation addAction["Arsenalscript deaktivieren", {
-		arsenalarea_activation = false;
-		publicVariable "arsenalarea_activation";
+		arsenal_area_activation = false;
+		publicVariable "arsenal_area_activation";
 	}, [], 1.5, true, false, "", "true", 5];
 	
 	arsenalarea_activation addAction["Arsenalscript aktivieren", {
-		arsenalarea_activation = true;
-		publicVariable "arsenalarea_activation";
+		arsenal_area_activation = true;
+		publicVariable "arsenal_area_activation";
 		[] execVM "Gattungsscript\areaScript.sqf";
 	}, [], 1.5, true, false, "", "true", 5];
 	
