@@ -12,6 +12,8 @@ _thingsToPopulateLB_vehicles =
 	"Wolf",
 	"Multi",
 	"Eagle",
+	"Eagle Hotel Tropen",
+	"Eagle Hotel Fleck",
 	"WLP - Munition",
 	"WLP - Instandsetzung",
 	"WLP - Treibstoff"
@@ -30,6 +32,8 @@ _thingsToPopulateCN_vehicles =
 	"Redd_Tank_LKW_leicht_gl_Wolf_Flecktarn_FueFu", 
 	"BWA3_Multi_Fleck", 
 	"BWA3_Eagle_Fleck", 
+	"ASA_Eagle_hotel_Tropen",
+	"ASA_Eagle_hotel_Fleck",
 	"asa_BWA3_WLP14_Ammo_Fleck", 
 	"BWA3_WLP14_Repair_Fleck", 
 	"BWA3_TCK9_Fuel_Fleck"
