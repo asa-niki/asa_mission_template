@@ -27,6 +27,9 @@ if (isNil "arsenalBox") then {
 /*
 ACEX Fortify 
 Bauzeit ist von den Kosten abhänig.
+
+Um Seite des Fortify Tools Nachfolgend zu wechseln, 
+muss west mit east ersetzt werden. 
 */
 
 [west, -1, [
@@ -71,3 +74,4 @@ Bauzeit ist von den Kosten abhänig.
 	["Land_HBarrierWall6_F", 1],
 	["Land_HBarrierTower_F", 1]
 	]] call acex_fortify_fnc_registerObjects;
+
