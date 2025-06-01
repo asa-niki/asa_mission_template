@@ -1,38 +1,13 @@
-1 enableChannel [true, false];
-arsenal_area_activation = true;
-publicVariable "arsenal_area_activation";
+["ACRE_PRC152", "default", "example1"] call acre_api_fnc_copyPreset;
 
-missionNamespace setvariable ["SPLogLevel", 3];
-profileNamespace setvariable ["SPSavelocation", 1];
+["ACRE_PRC152", "default", 1, "description", "BtlNet"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 2, "description", "PLTNET 2"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 3, "description", "PLTNET 3"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 4, "description", "COY"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 5, "description", "CAS"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 6, "description", "FIRES"] call acre_api_fnc_setPresetChannelField;
 
-if (isNil "arsenalarea_activation") then {
-	arsenalarea_activation = "VR_3DSelector_01_incomplete_F" createVehicle [-10, -10, 0];
-	publicVariable "arsenalarea_activation";
-	arsenalarea_activation allowDamage false;
-};
-if (isNil "dumpArsenal") then {
-	dumpArsenal = "Land_PaperBox_closed_F" createVehicle [0, 0, 0];
-	publicVariable "dumpArsenal";
-	dumpArsenal allowDamage false;
-	dumpArsenal enableSimulation false;
-};
-if (isNil "arsenalBox") then {
-	arsenalBox = "asa_Arsenal_GER_F" createVehicle [0, 0, 0];
-	publicVariable "arsenalBox";
-	arsenalBox allowDamage false;
-	arsenalBox enableSimulation false;
-};
-
-
-/*
-ACEX Fortify 
-Bauzeit ist von den Kosten abhänig.
-
-Um Seite des Fortify Tools Nachfolgend zu wechseln, 
-muss west mit east ersetzt werden. 
-*/
-
-[west, -1, [
+[west, -1, [ // west = BLUFOR, east = OPFOR, independent = GRENFOR
 
 	["RoadCone_L_F",-2],
 	["PortableHelipadLight_01_red_F",-2],
@@ -74,4 +49,3 @@ muss west mit east ersetzt werden.
 	["Land_HBarrierWall6_F", 1],
 	["Land_HBarrierTower_F", 1]
 	]] call acex_fortify_fnc_registerObjects;
-

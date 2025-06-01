@@ -15,6 +15,7 @@ _unit removeAction _actionID2;
 
 if (lActivation == true) then {
 	_position = getPos _unit;
+	sleep 300;
 	"supplyCrateSpawn" setMarkerPos _position;
 	_unit addAction["<t color='#ff0000'>Logistikspawnpunkt bewegen</t>", "call JUJU_fnc_logiMarkerAddAction",  nil, 1.5, true, true, "", "true", 0];
 }else{

@@ -8,8 +8,9 @@ while {arsenal_area_activation} do {
 			no = _listOfPlayers - playerArsenalList
 		};
 		
-		{if (getPlayerUID _x isEqualTo "76561198823187514" || getPlayerUID _x isEqualTo "76561198337717542" || getPlayerUID _x isEqualTo "76561198354281943") then { //juju, Core, Kalacos
+		{if ((getPlayerUID _x isEqualTo "76561198823187514" || getPlayerUID _x isEqualTo "76561198337717542" || getPlayerUID _x isEqualTo "76561198354281943") && _x getVariable ["NotGotPersArs", true]) then { //juju, Core, Kalacos
 			[_x, 1, ["ACE_SelfActions", "ASA"], persAction] call ace_interact_menu_fnc_addActionToObject;
+			_x setVariable ["NotGotPersArs", false];
 		};
 		}forEach no;
 
@@ -22,6 +23,7 @@ while {arsenal_area_activation} do {
 		replace = playerArsenalList - _listOfPlayers;
 		{if (getPlayerUID _x isEqualTo "76561198823187514" || getPlayerUID _x isEqualTo "76561198337717542" || getPlayerUID _x isEqualTo "76561198354281943") then { //juju, Core, Kalacos
 			[_x,1,["ACE_SelfActions", "ASA", "persArsenal"]] call ace_interact_menu_fnc_removeActionFromObject;
+			_x setVariable ["NotGotPersArs", true];
 		};
 		}forEach replace;
 		{[_x,1,["ACE_SelfActions", "ASA", "Arsenal"]] call ace_interact_menu_fnc_removeActionFromObject} forEach replace;  

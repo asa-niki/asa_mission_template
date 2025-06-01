@@ -1,24 +1,24 @@
 #include "gozLogiPoint\dialog.hpp"
-#include "Gattungsscript\defines.hpp"
+#include "defines.hpp"
 #include "Gattungsscript\rollenDialog.hpp"
 
 //------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------Hier Editieren-------------------------------------------------//
 //------------------------------------------------------------------------------------------------------------//
 
-author			= "Niki + Hausmeister";
-onLoadName		= "Operation Crossrods IV";
-OnLoadIntro     = "Operation Crossrods IV";
-onLoadMission	= "Deutsche Kräfte sind an der Finnischen Ostflanke eingesetzt. Die 22. Panzerbrigade und die German Rangers sind angetreten um einen anlaufenden Russischen Großangriff abzuwehren und in das Gebiet der Russischen Förderation hineinzustoßen."; //Kurze Beschreibung
+author			= "juju";
+onLoadName		= "Kaserne";
+OnLoadIntro     = "Kaserne";
+onLoadMission	= ""; //Kurze Beschreibung
 loadScreen		= "images\intro.jpg"; //muss nicht bearbeitet werden
-briefingName    = "Operation Russitsch - 1";
+briefingName    = "Kaserne";
 
 class CfgWorlds
 {
 	class Any
 	{
 		author = "NIKI";
-		description = "An der Finnischen Grenze kommt es zur Entscheidung.";
+		description = "";
 		loadingTexts[] = 
         {   
             "Tarnen und Täuschen ist mehr als nur ein leeres Versprechen - es ist die Kunst, unentdeckt zu bleiben.",
@@ -119,5 +119,28 @@ class CfgFunctions
 				file = "scripts\logiReplacement\moveLogiMarker.sqf";
 			};
 		};
+		class Gattungsscript
+		{
+			class GattungsscriptStart
+			{
+				file = "Gattungsscript\scriptStart.sqf";
+			};
+		};
+		class onRespawnRoll
+		{
+			class camoFleck
+			{
+				file = "scripts\onRespawnRoll\camoFleck.sqf";
+			};
+			class camoTropen
+			{
+				file = "scripts\onRespawnRoll\camoTropen.sqf";
+			};
+		};
 	};
 };
+
+////////////////////////////////////////////////////
+////////////// Kasernen Sachen /////////////////////
+////////////////////////////////////////////////////
+
